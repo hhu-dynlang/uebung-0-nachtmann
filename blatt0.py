@@ -18,7 +18,6 @@ def print_pascal(n):
 
 
 def flatten(not_flat):
-    raise IndexError()
     result = []
     for l in not_flat:
         if isinstance(l, list):

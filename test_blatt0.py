@@ -1,5 +1,3 @@
-import pytest
-
 from blatt0 import flatten
 
 
@@ -13,13 +11,12 @@ def test_pascal():
     # assert gen_pascal(3) == [1, '\n', 1, 1, '\n', 1, 2, 1, '\n']
 
 
-# def test_flatten():
-#     assert flatten([[1, 2, 3], [4, 5]]) == [1, 2, 3, 4, 5]
+def test_flatten():
+    assert flatten([[1, 2, 3], [4, 5]]) == [1, 2, 3, 4, 5]
 
 
 def test_flatten_recursiv():
-    with pytest.raises(IndexError):
-        flatten([1, 2, 3, [1, 2, 3], [4, 5, [6, 7, [8, 9]]]]) == [1, 2, 3, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert flatten([1, 2, 3, [1, 2, 3], [4, 5, [6, 7, [8, 9]]]]) == [1, 2, 3, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 def test_fizz_buzz():
